@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
         questions[i].addEventListener('click', abreOuFechaResposta);
     }
 
+
+    
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
         loop: true,

@@ -51,16 +51,23 @@
             cursor: pointer;
             border-bottom: 5px solid transparent;
 
-            &--is-active {
+            &--is-active { 
                 border-color: variaveis.$corTextoSecundario;
+            }
+
+            @media (min-width: 320px) and (max-width: 365px) {
+                &:first-child {
+                    margin-left: 20vw;
+                }
             }
 
             @media (max-width: 768px) {
                 font-size: 18px;
-
+                
                 &:nth-child(2){
                     margin-left: 20px;
                     margin-right: 20px;
+                    
                 }
             }
         }
