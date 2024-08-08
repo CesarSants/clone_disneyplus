@@ -35,6 +35,48 @@ document.addEventListener('DOMContentLoaded', function() {
     for(let i = 0; i < questions.length; i++) {
         questions[i].addEventListener('click', abreOuFechaResposta);
     }
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        loop: true,
+        centerSlide: 'true',
+        grabCursor: 'true',
+        rewind: true, //
+        //spaceBetween: 0,
+        //centeredSlides: true,
+        //freeMode: true,
+        //fade: 'true',
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        hashNavigation: {
+            watchState: true, //
+        },
+        /*breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            520: {
+                slidesPerView: 2,
+            },
+            1004: {
+                slidesPerView: 3,
+            },
+        }
+
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },*/
+    });
 })
 
 function ocultaElementosDoHeader() {
@@ -71,3 +113,5 @@ function escondeTodasAbas() {
         tabsContainer[i].classList.remove('shows__list--is-active');
     }
 }
+
+

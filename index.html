@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clone Disney+</title>
     <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 <body>
     <header class="header">
@@ -44,9 +46,9 @@
                     <span class="text">R$45,90/mês*</span>
                 </li>
                 <li class="hero__content__combos__combo">
-                    <img src="./dist/images/logos/disney_star_plus.png" alt="Disney+ - Star+ - Combo+">
+                    <img src="./dist/images/logos/disney_star_plus_starzplay.png" alt="Disney+ - Star+ - Combo+">
                     <button class="button">Assine Agora</button>
-                    <span class="text">R$45,90/mês*</span>
+                    <span class="text">R$55,90/mês*</span>
                 </li>
             </ul>
             <p class="text--small">
@@ -129,32 +131,37 @@
     </section>
     <section class="plans">
         <h2 class="title--big">Escolha seu plano</h2>
-        <ul class="plans__list">
-            <li class="plans__list__item">
-                <img src="./dist/images/logos/disneyplus_underline.png" alt="">
-                <strong class="title--small">R$ 27,90/mês*</strong>
-                <p class="text--big">
-                    No Disney+ você encontra as últimas estreias do cinema, originais e clássicos inesquecíveis.
-                </p>
-                <button class="button">Assine agora</button>
-            </li>
-            <li class="plans__list__item">
-                <img src="./dist/images/logos/disney_star_plus_sm.png" alt="">
-                <strong class="title--small">R$ 45,90/mês*</strong>
-                <p class="text--big">
-                    Assine Disney+ e Star+ juntos. Economize e aproveite agora os dois serviços por um preço único.
-                </p>
-                <button class="button">Assine agora</button>
-            </li>
-            <li class="plans__list__item">
-                <img src="./dist/images/logos/disney_star_plus_starzplay_underline.png" alt="">
-                <strong class="title--small">R$ 55,90/mês*</strong>
-                <p class="text--big">
-                    Disney+, Star+ e STARZPLAY em um plano especial. Assine agora os três serviços juntos.
-                </p>
-                <button class="button">Assine agora</button>
-            </li>
-        </ul>
+        <div class="swiper mySwiper">
+            <ul class="plans__list swiper-wrapper">
+                <li class="plans__list__item swiper-slide">
+                    <img src="./dist/images/logos/disneyplus_underline.png" alt="">
+                    <strong class="title--small">R$ 27,90/mês*</strong>
+                    <p class="text--big">
+                        No Disney+ você encontra as últimas estreias do cinema, originais e clássicos inesquecíveis.
+                    </p>
+                    <button class="button">Assine agora</button>
+                </li>
+                <li class="plans__list__item plans__list__item--mod swiper-slide">
+                    <img src="./dist/images/logos/disney_star_plus_sm.png" alt="">
+                    <strong class="title--small">R$ 45,90/mês*</strong>
+                    <p class="text--big">
+                        Assine Disney+ e Star+ juntos. Economize e aproveite agora os dois serviços por um preço único.
+                    </p>
+                    <button class="button">Assine agora</button>
+                </li>
+                <li class="plans__list__item swiper-slide">
+                    <img src="./dist/images/logos/disney_star_plus_starzplay_underline.png" alt="">
+                    <strong class="title--small">R$ 55,90/mês*</strong>
+                    <p class="text--big">
+                        Disney+, Star+ e STARZPLAY em um plano especial. Assine agora os três serviços juntos.
+                    </p>
+                    <button class="button">Assine agora</button>
+                </li>
+            </ul>
+            <div class="swiper-button-next navbar"></div>
+            <div class="swiper-button-prev navbar"></div>
+            <div class="swiper-pagination"></div>
+        </div>
         <p class="text--small">
             *O preço pode variar caso a assinatura seja feita através de outras plataformas.
         </p>
@@ -169,7 +176,10 @@
         </div>
     </section>
     <section class="image-text-section image-text-section--image-full-width">
-        <img src="./dist/images/fundo_rei_leao.png" alt="">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./dist/images/fundo_rei_leao_celular.png"/>
+            <img src="./dist/images/fundo_rei_leao.png" alt="">
+        </picture>
         <div class="image-text-section__text_container image-text-section--image-full-width__text_container">
             <h2 class="title">Baixe filmes e series</h2>
             <p class="text--big">
@@ -373,6 +383,7 @@
             </p>
         </div>
     </footer>
-    <script src="./src/main.js"></script>
 </body>
+<script src="./src/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </html>

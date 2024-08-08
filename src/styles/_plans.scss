@@ -1,5 +1,7 @@
+@use 'variaveis';
+
 .plans {
-    padding: 5.6vw;
+    padding: 6.6vw 5.6vw 6.6vw 5.6vw;
     
     h2 {
         text-align: center;
@@ -9,6 +11,14 @@
         display: flex;
         justify-content: space-around;
         margin-top: 40px;
+
+        @media (max-width: 768px) {
+            
+        }
+
+        .button {
+            margin-top: 24px;
+        }
         
         &__item {
             text-align: center;
@@ -16,11 +26,12 @@
             max-width: 380px;
             width: 100%;
             overflow: hidden;  //
-            display: flex;     //
+            display: flex !important;     //
             flex-direction: column;  // 
             justify-content: center;  //
-            
-            &:nth-child(2) {
+            align-items: center;
+
+            &--mod {                                             //&:nth-child(2) 
                 background-image: url(../images/fundo_combo_plus.png);
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -42,4 +53,48 @@
         p {
             text-align: center;
         }
+}
+
+.navbar {
+    color: variaveis.$corDeFundoBotaoPrimario;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: lighten(variaveis.$corDeFundoBotaoPrimario, 20%);
+    }
+
+    &::before, &::after {
+        font-size: 50px;
+    }
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    right: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: variaveis.$corDeFundoBotaoPrimario;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 20%);
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
