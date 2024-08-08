@@ -14,7 +14,12 @@
                                     da imagem pois abrindo ela percebi que ela possui uma grande parte com a cor de fundo, talver o arquivo que o professor
                                     esta utilizando nao seja o mesmo disponibinilado para os alunos porque eu fiz exatamente igual a ele pois utilizando a mesma 
                                     configuração usada na aula era esperado o mesmo  resultado porem nao foi o que aconteceu oque sugere que o problema esta na imagem
-                                    */                              
+                                    */  
+    .button {
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
+    
     &__content {
         max-width: 640px;
 
