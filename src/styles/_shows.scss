@@ -55,9 +55,9 @@
                 border-color: variaveis.$corTextoSecundario;
             }
 
-            @media (min-width: 320px) and (max-width: 365px) {
+            @media (min-width: 320px) and (max-width: 374px) {
                 &:first-child {
-                    margin-left: 20vw;
+                    margin-left: 20vw; 
                 }
             }
 
